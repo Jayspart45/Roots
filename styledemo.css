@@ -1,0 +1,24 @@
+        body {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container{
+            height: 800px;
+            width: 800px;
+        }
+        .container #layout{
+            background-color: aqua;
+        }
+        label{
+            width: 200px;
+        }
+        button{
+            border-radius: 5px;
+            background-color:#000;
+            color: white;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assests/style1.css">
+    <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
+    <!--font awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet"> 
+    <link href="https://fontawesome.com/v5.15/icons/star?style=solid" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="file:///C:/Users/ELCOT/Desktop/font/css/all.css" rel="stylesheet">
+    <!--end of font awesome-->
+</head>
+<body>
+    <!---header-->
+    <header>
+        
+        
+        <nav class=" navbar navbar-expand-lg navbar-dark web_maincolor" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand  mb-0 h1 fs-2">
+                Roots
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false"
+             aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav mx-auto">
+
+                  <li class="nav-item">
+                    <a href="/home.html" class="nav-link active">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/home.html" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Help
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Facebook</a></li>
+                      <li><a class="dropdown-item" href>Youtube</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Github</a></li>
+                    </ul>      
+                  </li>
+                  <li class="nav-item">
+                    <a href="/home.html" class="nav-link">Our products</a>
+                  </li>
+                </ul>
+                <a href="/Login.html"><button class="btn p-2 my-lg-0 my-2 btnhover">Login</button> </a>
+
+              </div>
+        </div>
+        </nav> 
+
+          
+    </header>
+    <!---end header-->
+    <section id="home_1">
+      <div class="container">
+
+      
+       <h1 class="text-center">Layout </h1> 
+       <p class="h3 text-center">The Constraints Declaration</p>
+      </div>
+         
+      
+    </section>
+    <!--Layout-->
+    <section id="input_1">
+      <form action="layout1.html" method="post">
+     
+      <div class="container text-center">
+        <h1 class="text-center display-1 pb-5">Layout Constraints</h1>
+        <div class="input-group mb-3 input-group-lg">
+          <span class="input-group-text  btn-outline-warning ">Length</span>
+          <input type="number" class="form-control input-width" id="length">
+          <span class="input-group-text  btn-outline-warning">feet</span>
+          <!-- <select class="form-select" >
+            <option selected></option>
+            <option value="1">feet</option>
+            <option value="2">Inch</option>
+
+          </select> -->
+        </div>
+       
+      <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text  btn-outline-warning">Breadth</span>
+        <input type="number" class="form-control input-width" id="breath">
+        <span class="input-group-text  btn-outline-warning">feet</span>
+        
+        
+      </div>
+      <button class="btn signin" id="submit" onclick=calculate()>Proceed</button> 
+    </form>
+
+    </div>
+    </section>
+    <section id="box">
+    <div class="container">
+      <div id="layout" style="background-color: #c5c5c5;""></div>
+    </div>
+
+    </section>
+
+    <!--footer-->
+    <footer class="text-center">
+      Copyrighted <i class="fas fa-copyright"></i>2021 Roots Group Of Companies. All Rights Reserved<br>
+      Follows us:<i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="far fa-envelope"></i><i class="fab fa-linkedin-in"></i>
+    </footer>
+    
+
+    <!--Announcement-->
+    <!-- End Announcement-->
+    
+      
+       
+   
+        
+
+
+<!--bootstrap 35-->            
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<script>
+  function calculate(){
+      var length,breath;
+      length =document.getElementById("length").value;
+      breath =document.getElementById("breath").value;
+      var ratio;
+      if(length>breath){
+          ratio=breath/length;
+          document.getElementById("layout").style.height="100%"; 
+          document.getElementById("layout").style.width=ratio*100+"%"; 
+      }
+      else{
+          ratio = length/breath;
+          document.getElementById("layout").style.width="100%"; 
+          document.getElementById("layout").style.height=ratio*100+"%"; 
+      }
+  }
+</script>
+</body>
+</html>
