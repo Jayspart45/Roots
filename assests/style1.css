@@ -40,7 +40,13 @@
     z-index: 100;
     padding: .5rem 5rem;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    animation: nav 2s ease-in-out;
     
+}
+@keyframes nav{
+    0%{
+        transform: translateY(-100%);
+    }
 }
 .navbar .navbar-brand{
     font-size: 25px;
@@ -58,6 +64,10 @@
     background: tomato;
     width: 5rem;
     border-radius: 15px;
+}
+.container img{
+    width: 100px;
+    height: 50px;
 }
 section{
    width: 100%;
@@ -85,10 +95,24 @@ section{
                  0px 5px 0px #ccc,
                  0px 6px 0px #ccc,
                  0px 7px 0px #ccc;
+    animation:content 2s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 }
 #home p{
     font-size: 18px;
     color: #fff;
+    animation: p 1s ease-in-out;
+}
+@keyframes p{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }
 #home .input-group{
     width: 40%;
@@ -105,7 +129,7 @@ section{
         font-size: 50px;
         font-weight:600;
         /* background: #fff; */
-        color:black;
+        color:white;
         letter-spacing: normal;
         font-family: 'Roboto', sans-serif;
         border-radius: 10px;
@@ -115,9 +139,11 @@ section{
         
     }
     #home h1:hover{
-         border:2px solid #fff!important ;
-         
-         color:#fd7e14;
+         background:linear-gradient(to right,rgb(255, 0, 157),rgb(255, 111, 0) 100%);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         border: 3px solid #000!important;
     }
     #home p{
         font-size: 15px;
@@ -305,6 +331,14 @@ i{
                  0px 5px 0px #ccc,
                  0px 6px 0px #ccc,
                  0px 7px 0px #ccc;
+                 animation: layout 2s ease-in-out;
+}
+@keyframes layout{
+    0%{
+        opacity: 0;
+        transform:translateX(-100%);
+    }
+    
 }
 #home_1{
     width: 100%;
@@ -357,6 +391,12 @@ i{
     width: 200px;
 
 }
+.proceed{
+    background-color: #6610f2  !important;
+    width: 300px;
+    color: white!important;
+
+}
 @media(max-width:700px){
     #input_1 .container{
         margin-left: 5px;
@@ -366,6 +406,38 @@ i{
         background-color: white!important;
     }
 }
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
 
 
 
@@ -373,21 +445,64 @@ i{
 */
 
 /*---------------------------------------------------------------------------------------------*/
-/*layout1*/
- #suma button{
-     border: 1px solid #000;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     resize: both;
-     overflow: hidden;
-}
 
-#box .flex-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-#box section.content{
-    flex: 1;
+
+/*------------------------layout1-------------------------------*/
+
+
+  
+  .imgBox{
+    background-image: url('https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7' );
+    position: relative;
+    background-size:auto;
+    height: 400px;
+    width: 400px;
+    cursor: pointer;
+  }
+  
+  .whiteBox{
+    display: inline-block;
+    height: 405px;
+    width: 405px;
+    margin: 10px;
+    background-color: white;
+    border: 3px black solid;
+  }
+  
+  .hold{
+    border: solid red 4px;
+  }
+  
+  .dashed{
+    background: rgb(214, 206, 206);
+    border-style: dashed;
+  }
+  
+  .hide{
+    display: none;
+  }
+  /*----------------*/
+  #Dragid h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+  }
+  @media(max-width:700px){
+      .whiteBox{
+          width: 300px;
+          height: 300px;
+      }
+      .imgBox{
+          width: 295px;
+          height: 295px;
+      }
+  }
+  @media(max-width:350px){
+    .whiteBox{
+        width: 30px;
+        height: 30px;
+    }
+    .imgBox{
+        width: 25px;
+        height: 25px;
+    }
 }

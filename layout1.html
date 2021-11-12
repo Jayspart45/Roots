@@ -4,21 +4,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roots Layout</title>
-  <link rel="stylesheet" href="styledemo.css">
-  <link rel="" href="" class="layout.html">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Roots</title>
+  <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assests/style1.css">
+
 </head>
 
-<body>
-<form action="next.html" method="post">
-  
-</form>
- 
-    <script>
-  var length= location.search;
-  alert(length);
-      
+<body id="Drag" style="background-color: darkslateblue;">
+  <header>
+
+
+    <nav class=" navbar navbar-expand-lg navbar-dark web_maincolor" id="navbar">
+      <div class="container">
+        <a href="/" class="navbar-brand  mb-0 h1 fs-2">
+          Roots
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class=" collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav mx-auto">
+
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Help
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                <li><a class="dropdown-item" href>Youtube</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Github</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link">Our products</a>
+            </li>
+          </ul>
+          <a href="/Login.html"><button class="btn p-2 my-lg-0 my-2 btnhover">Login</button> </a>
+
+        </div>
+      </div>
+    </nav>
+
+
+  </header>
+  <section style="display: block;" id="Dragid">
+    <div class="container" style="margin-top: 100px;" >
+      <label>
+        
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." >
+              
+      </label>
+
+      <ul id="myUL">
+        <li><a href="#">Adele</a></li>
+        <li><a href="#">Agnes</a></li>
+
+        <li><a href="#">Billy</a></li>
+        <li><a href="#">Bob</a></li>
+
+        <li><a href="#">Calvin</a></li>
+        <li><a href="#">Christina</a></li>
+        <li><a href="#">Cindy</a></li>
+      </ul>
+      </div>
+    <div class="container" style="margin-top: 30px;margin-top: 100px;background-color:wheat; padding-top:20px">
+      <h1 class="text-center">Layout</h1>
+      <p class="text-center">Drag the img to the layout to fit!</p>
+      <div class="whiteBox">
+        <div class="imgBox" draggable="true"></div>
+      </div>
+
+
+
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
+    </div>
+
+  </section>
+
+  <script>
+
+    console.log('This is drag and drop utility');
+
+    const imgBox = document.querySelector('.imgBox');
+    const whiteBoxes = document.getElementsByClassName('whiteBox');
+
+    // Event listeners for draggable element imgBox
+    imgBox.addEventListener('dragstart', (e) => {
+      console.log('DragStart has been triggered');
+      e.target.className += ' hold';
+      setTimeout(() => {
+        e.target.className = 'hide';
+      }, 0);
+
+    });
+
+    imgBox.addEventListener('dragend', (e) => {
+      console.log('DragEnd has been triggered');
+      e.target.className = 'imgBox';
+    });
+
+    for (whiteBox of whiteBoxes) {
+      whiteBox.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        console.log('DragOver has been triggered');
+      });
+
+      whiteBox.addEventListener('dragenter', (e) => {
+        console.log('DragEnter has been triggered');
+        e.target.className += ' dashed';
+      })
+
+      whiteBox.addEventListener('dragleave', (e) => {
+        console.log('DragLeave has been triggered');
+        e.target.className = 'whiteBox'
+      })
+
+      whiteBox.addEventListener('drop', (e) => {
+        console.log('Drop has been triggered');
+        e.target.append(imgBox);
+      })
+    }
+  </script>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
     </script>
+  <!--bootstrap 35-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

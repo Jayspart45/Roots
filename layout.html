@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet"> 
     <link href="https://fontawesome.com/v5.15/icons/star?style=solid" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="file:///C:/Users/ELCOT/Desktop/font/css/all.css" rel="stylesheet">
     <!--end of font awesome-->
 </head>
 <body>
@@ -66,6 +65,7 @@
     <!---end header-->
     <section id="home_1">
       <div class="container">
+        
 
       
        <h1 class="text-center">Layout </h1> 
@@ -76,7 +76,6 @@
     </section>
     <!--Layout-->
     <section id="input_1">
-      <form action="layout1.html" method="post">
      
       <div class="container text-center">
         <h1 class="text-center display-1 pb-5">Layout Constraints</h1>
@@ -99,8 +98,7 @@
         
         
       </div>
-      <button class="btn signin" id="submit" onclick=calculate()>Proceed</button> 
-    </form>
+      <button class="btn signin" id="submit" onclick=calculate()>Create Layout</button> 
 
     </div>
     </section>
@@ -108,8 +106,14 @@
     <div class="container">
       <div id="layout" style="background-color: #c5c5c5;""></div>
     </div>
-
+   
+    
     </section>
+   <div class="container" style="display: flex;align-items:center;justify-content:center">
+    <a href="/layout1.html">
+      <button class="btn proceed">Proceed</button>
+    </a>
+   </div>
 
     <!--footer-->
     <footer class="text-center">

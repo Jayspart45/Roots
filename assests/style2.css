@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: #fd7e14;
+    height: 60px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+}
+#head h2{
+    margin-left: 100px;
+    color: white;
+}
+#head nav{
+    margin-right: 100px;
+}
+
+#head li{
+    padding-top: 10px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#head a{
+    text-decoration: none;
+    color: white;
+}
+#head a:hover{
+    border-bottom: 3px solid white;
+
+}
+
+ .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,rgb(255, 0, 157),rgb(255, 111, 0) 100%);
+
+}
+form{
+    width: 25rem;
+    min-height: 30rem;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    background: linear-gradient(to right,rgb(255, 0, 157),rgb(255, 111, 0) 100%);
+    border-radius: 20px;
+}
+h1{
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5%;
+    text-align: center;
+    border: none;
+    color: white;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+label{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 5%;
+}
+button{
+    width: 200px;
+    height: 50px;
+    padding: 10px 15px;
+    background: transparent;
+    margin-left: 15%;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+}
+button:hover{
+    border: none;
+    color: black;
+    border-bottom: 1px solid white;
+
+}
+@media screen  and (max-width:560px) {
+
+form{
+    border: none;
+}
+h2{
+    font-size: 20px;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+li{
+    font-size: 15px;
+    margin-right: 0;
+    padding-right: 5px;
+}
+
+}
+/*-----*/
