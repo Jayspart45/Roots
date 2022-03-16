@@ -1,0 +1,70 @@
+{
+    "products": [
+        {
+            "id": "p_8",
+            "name": "Venus pride",
+            "length": "596mm",
+            "width": "612mm"
+        },
+        {
+            "id": "p_9",
+            "name": "Venus Prime",
+            "length": "596mm",
+            "width": "612mm"
+        },
+        {
+            "id": "p_10",
+            "name": "Venus WP1",
+            "length": "754mm",
+            "width": "600mm"
+        },
+        {
+            "id": "p_11",
+            "name": "Venus WP2",
+            "length": "765mm",
+            "width": "636mm"
+        },
+        {
+            "id": "p_6",
+            "name": "Venus Excel",
+            "length": "562mm",
+            "width": "612mm"
+        },
+        {
+            "id": "p_3",
+            "name": "Pluto",
+            "length": "497mm",
+            "width": "540mm"
+        },
+        {
+            "id": "p_7",
+            "name": " Venus Gang Chair 2 seater",
+            "length": "1890mm",
+            "width": "610mm"
+        },
+        {
+            "id": "p_2",
+            "name": "Jupiter Gang Chair 2 seater",
+            "length": "1242mm",
+            "width": "623mm"
+        },
+        {
+            "id": "p_4",
+            "name": "Jupiter Gang Chair 3 seater",
+            "length": "1830mm",
+            "width": "623mm"
+        },
+        {
+            "id": "p_1",
+            "name": "Junior Jupiter Gang Chair 2 side table",
+            "length": "1455mm",
+            "width": "610mm"
+        },
+        {
+            "id": "p_5",
+            "name": "Table Square / Rectangular",
+            "length": "900mm",
+            "width": "900mm"
+        }
+    ]
+}
