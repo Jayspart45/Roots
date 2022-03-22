@@ -1,256 +1,335 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roots</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roots</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assests/style1.css">
-    <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
-    <!--font awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet"> 
-    <link href="https://fontawesome.com/v5.15/icons/star?style=solid" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!--end of font awesome-->
+  <link rel="stylesheet" href="assests/style.css">
+  <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+  <!--font awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+  <link href="https://fontawesome.com/v5.15/icons/star?style=solid" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!--end of font awesome-->
 </head>
+
 <body>
-    <!---header-->
-    <header>
-        
-        
-        <nav class=" navbar navbar-expand-lg navbar-dark web_maincolor" id="navbar">
-        <div class="container">
+  <!---header-->
+  <header>
+    <nav class="navbar navbar-expand-lg ps-5" id="navbar">
+      <a href="./home.html">
+        <img src="assests/images/Roots_logo.png" id="logo_1" class="img-fluid">
 
-            <a href="/" class="navbar-brand  mb-0 h1 fs-2">
-                <img src="/assests/images/efeb2effed9d7543295b9db2b6b3136c_400x400.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false"
-             aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      </a>
 
-            <div class=" collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav mx-auto">
-
-                  <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Help
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Facebook</a></li>
-                      <li><a class="dropdown-item" href>Youtube</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Github</a></li>
-                    </ul>      
-                  </li>
-                  <li class="nav-item">
-                    <a href="#products" class="nav-link">Our products</a>
-                  </li>
-                </ul>
-                <a href="/Login.html"><button class="btn p-2 my-lg-0 my-2 btnhover">Login</button> </a>
-              </div>
-        </div>
-        </nav> 
-
-          
-    </header>
-    <!---end header-->
-    <section id="home">
-      <div class="container">
-
-      
-       <h1 class="text-center"> Roots Furniture</h1> 
-       <p class="mx-5"><span><em>Roots believe in delivering simple solutions for complex problems, with the best of technology and people.
-        Growing everyday, globally, we strive to make your needs our priority. Anticipating needs. Nurturing ideas.
-         Adding value.</em></span></p>
-         </div>
-       <div class="input-group m-4">
-         <input type="text" class="form-control" placeholder="Email Address">
-         <button class="btn signin">Get started</button>
-       </div>   
-      
-    </section>
-    <!--Layout-->
-    <section id="layout">
-
-      <div class="container my-5 text-center"> 
-        <h1 class="text-dark"><i class="fas fa-layer-group"></i>Layout view</h1>
-        <p>To view the layout and designs</p>
-        <a href="/layout.html">
-          <button class="btn signin text-white gs">Get Started</button>
-        </a>
+      <button class="navbar-toggler pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#layout-getstarted">Layout</a></li>
+          <li class="nav-item"><a class="nav-link" href=" #about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href=" #products">Our products</a></li>
+        </ul>
+        <img   src="./assests/images/syona_logo.png" id="logo_2"class="img-fluid" style="margin-right:30px ;">
       </div>
-    </section>
-    
-    
-    <!--About-->
-    <section id="about">
+
+    </nav>
+
+
+  </header>
+  <!---end header-->
+  <section id="home">
+    <div class="container">
+
+
+      <h1 class="text-center"> Roots Furniture</h1>
+      <p class="mx-5"><span>Roots believe in delivering simple solutions for complex problems, with the best of
+          technology and people.
+          Growing everyday, globally, we strive to make your needs our priority, Anticipating needs, Nurturing ideas,
+          Adding value.</span></p>
+    </div>
+  </section>
+  <!--Layout-->
+  <section id="layout-getstarted">
+
+    <div class="container my-5 text-center">
+      <h1 class="text-dark"><i class="fas fa-layer-group"></i>Layout view</h1>
+      <p>To view the layout and designs</p>
+      <a href="layout.html">
+        <button class="btn signin text-white gs">Get Started</button>
+      </a>
+    </div>
+  </section>
+
+
+  <!--About-->
+  <section id="about">
     <div class="container my-5">
-      <h1 class="text-center py-3 pb-5"><span>About us</span></h1>  
+      <h1 class="text-center py-3 pb-5"><span>About us</span></h1>
       <div class="row">
         <div class="col-lg-4 col-md-4 col-12">
-          <div class="card text-white bg-danger mb-3 border text-center" >
+          <div class="card text-dark bg-info mb-3 border text-center">
             <div class="card-header fw-bold">Corporate Objective</div>
             <div class="card-body">
               <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia quasi eum laboriosam.
-                 Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis, repellendus!
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia
+                quasi eum laboriosam.
+                Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis,
+                repellendus!  
               </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card text-dark bg-success mb-3 border text-center">
+            <div class="card-header fw-bold">Vision</div>
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia
+                quasi eum laboriosam.
+                Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis,
+                repellendus!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card text-dark bg-dark mb-3 border text-center">
+            <div class="card-header fw-bold">CSR</div>
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia
+                quasi eum laboriosam.
+                Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis,
+                repellendus!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!---Help-->
+  <section id="products">
+    <div class="container">
+      <h1 class="text-center my-5"><span>Our Products</span></h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_1 .jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Junior Jupiter Gang Chair 2 seater with side table</h5>
+              <button class="btn singin" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Junior Jupiter Gang Chair 2 seater with side table" data-bs-length="1455" data-bs-breath="610" data-bs-img="/assests/images/img_1 .jpg" id="p_1">View</button>
+             
             </div>
           </div>
         </div>  
         <div class="col-lg-4 col-md-4 col-12">
-          <div class="card text-white bg-warning mb-3 border text-center" >
-            <div class="card-header fw-bold">Vision</div>
-            <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia quasi eum laboriosam.
-                Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis, repellendus!
-              </p>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-12">
-          <div class="card text-white bg-dark mb-3 border text-center">
-            <div class="card-header fw-bold">CSR</div>
-            <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque iste eos inventore voluptate, mollitia quasi eum laboriosam.
-                Similique, unde fugit? Accusamus doloribus natus libero odit voluptates alias repellat? Nobis, repellendus!
-              </p>
-            </div>
-        </div>
-        </div>
-      </div>
-      
-    </div>   
-    </section>
-    <!---Help-->
-    <section id="products">
-      <div class="container">
-        <h1 class="text-center my-5"><span>Our Products</span></h1>
-        <div class="row">
-           
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.x1FzPCu7fmJdVFEzEIGevwHaF6?w=205&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.x1FzPCu7fmJdVFEzEIGevwHaF6?w=205&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.x1FzPCu7fmJdVFEzEIGevwHaF6?w=205&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                  <img src="https://th.bing.com/th/id/OIP.tXP252kRmLIkOxC6bq5eOQHaEz?w=269&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="btn signin">Add to Cart</a>
-                  </div>
-                  </div>
-              </div>
+          <div class="card">
+            <img src="./assests/images/img_2.png"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jupiter Gang Chair 2 seater</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Jupiter Gang Chair 2 seater" data-bs-length="1242" data-bs-breath="623" data-bs-img="/assests/images/img_2.png" id="p_2"> view</button class="btn btnhover">
              
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_3.JPG"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pluto </h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Pluto" data-bs-length="497" data-bs-breath="540" data-bs-img="/assests/images/img_3.JPG" id="p_3">View </button class="btn btnhover">
+             
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_4.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jupiter Gang Chair 3 seater</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name=" Jupiter Gang Chair 3 seater" data-bs-length="1830" data-bs-breath="623" data-bs-img="/assests/images/img_4.jpg" id="p_4"> View </button class="btn btnhover">
+             
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_5.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Table Square/ Rectangulars</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Table Square/ Rectangular" data-bs-length="900" data-bs-breath="900" data-bs-img="/assests/images/img_5.jpg" id="p_5">View </button class="btn btnhover">
+             
+            </div>
+          </div>
+        </div>  
+        
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_6.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Venus Excel</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="3Venus Excel" data-bs-length="562" data-bs-breath="612" data-bs-img="/assests/images/img_6.jpg" id="p_6">View</button class="btn btnhover">
+             
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img-7.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Venus Gang Chair 3 seater</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Venus Gang Chair 3 seater" data-bs-length="1890" data-bs-breath="610" data-bs-img="/assests/images/img-7.jpg" id="p_7">View</button class="btn btnhover">
+                   
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img-8.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Venus prides</h5>
+              <button class="btn btnhover" data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Venus pride" data-bs-length="596" data-bs-breath="554" data-bs-img="/assests/images/img-8.jpg" id="p_8">View</button class="btn btnhover">
+             
+            </div>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./assests/images/img_9.jpg"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Venus Prime</h5>
+              <button class="btn btnhover"data-bs-toggle="modal" data-bs-target="#modal" data-bs-name="Junior Jupiter Gang Chair 2 seater with side table" data-bs-length="1455" data-bs-breath="610" data-bs-img="/assests/images/img_1 .jpg" id="p_1">View</button>
+             
+            </div>
+          </div>
+        </div>  
+   
         </div>
-      </div>
-     
 
-      </div>
-    </section>
-    <!--footer-->
-    <footer class="text-center">
+  </section>
+  <!--footer-->
+  <footer class="text-center">
     <div class="clearfix"></div>
 
-      Copyrighted <i class="fas fa-copyright"></i>2021 Roots Group Of Companies. All Rights Reserved<br>
-      Follows us:<i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="far fa-envelope"></i><i class="fab fa-linkedin-in"></i>
-    </footer>
-    
+    Copyrighted <i class="fas fa-copyright"></i>2021 Roots Group Of Companies. All Rights Reserved<br>
+    Follows us:<i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="far fa-envelope"></i><i
+      class="fab fa-linkedin-in"></i>
+  </footer>
 
-    <!--Announcement-->
-    <!-- End Announcement-->
-    
+
+  <!--Announcement-->
+  <!-- End Announcement-->
+  <div class="modal fade" id="modal" aria-labelledby="modal" aria-hidden="modal">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">
+            Information
+          </div>
+         </div> 
+        <div class="modal-body">
+               <img src="{% static '/assests/images/Roots.jpg' %}" class="modalimg" alt="">
+              <table class="table table-dark" style="margin-top: 20px;">
+                <thead>
+                  <tr>
+                    <th>name</th>
+                    <td class="name">1.Object</td>
+
+                  </tr>
+                <thead>
+                  <tr>
+                    <th>Length</th>
+                    <td class="length">574</td>
+
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <th>breadth</th>
+                    <td class="breath">473</td>
+
+                  </tr>
+                </thead>
+              
+              </table>
+          
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-primary" data-bs-dismiss="modal">close</div>
+        </div>
+      </div>
+    </div>
+  
+   </div>
+
+
+
+
+
+
+  <!--bootstrap 35-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
+    <script>
+      var modal = document.getElementById('modal')
+      modal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget
       
-       
-   
-        
+      var name = button.getAttribute('data-bs-name');
+      var modifyname = modal.querySelector('.name');
 
+      var length = button.getAttribute('data-bs-length');
+      var modifylength = modal.querySelector('.length');
 
-<!--bootstrap 35-->            
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+      var breath = button.getAttribute('data-bs-breath');
+      var modifybreath = modal.querySelector('.breath');
 
+      var img = button.getAttribute('data-bs-img');
+      var modifyimg = modal.querySelector('.modalimg');
+      
+      modifyname.textContent = name;
+      modifylength.textContent = length;
+      modifybreath.textContent = breath;
+      modifyimg.src = img
+})
+    </script>
 </body>
+
 </html>
