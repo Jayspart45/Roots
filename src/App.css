@@ -216,6 +216,7 @@ table {
 }
 .p {
     display: none;
+    border-radius: 4px;
     background-color: coral;
 }
 /*Layout*/
@@ -228,8 +229,8 @@ table {
     height: 619.37px;
 }
 #layout #p_3 {
-    width: 269px;
-    height: 247.76px;
+    width: 269px !important;
+    height: 247.76px !important;
 }
 #layout #p_4 {
     width: 310.68px;

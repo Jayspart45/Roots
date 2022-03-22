@@ -7,109 +7,141 @@ export default function Layout() {
         console.log(cart.split(','));
         let cartStorage = cart.split(',');
     }, []);
+
     const Calculate = () => {
         let lena = document.getElementById('length').value;
         let btha = document.getElementById('width').value;
         let rowa = document.getElementById('row').value;
         let cola = document.getElementById('col').value;
-        let unit = document.getElementById('unit').value;
+        var unit = document.getElementById('unit').value;
+        var spaceo = document.getElementById('spaceo').value;
+        var spaceb = document.getElementById('spaceb').value;
+
         localStorage.setItem('len', lena);
         localStorage.setItem('bth', btha);
         localStorage.setItem('rowa', rowa);
         localStorage.setItem('cola', cola);
         localStorage.setItem('unit', unit);
-        var len = localStorage.getItem('len');
-        var bth = localStorage.getItem('bth');
-        var rowb = localStorage.getItem('rowa');
-        var colb = localStorage.getItem('cola');
-        // var feet = 152;
-        // var ft = 152;
-        // var mil = 0.49856; // 1mm(0.003652) *152
-        // var centi = 4.92; // 1cm(0.03652)*152
-        // var meter = 498.68768; //1m(3.652)*152
+        localStorage.setItem('spaceo', spaceo);
+        localStorage.setItem('spaceb', spaceb);
 
-        // if (unit == 'Mm') {
-        //     var len = length * mil + 'px';
-        //     var bth = breath * mil + 'px';
-        //     var row = Row * mil + 'px';
-        //     var col = columnv * mil + 'px';
-        //     var space = spaceO * mil;
-        //     var spaceA = spaceB * mil;
-        //     console.log(space);
-        // } else if (unit == 'feet') {
-        //     var len = length * ft + 'px';
-        //     var bth = breath * ft + 'px';
-        //     var row = Row * ft + 'px';
-        //     var col = columnv * ft + 'px';
-        //     var space = spaceO * ft;
-        //     var spaceA = spaceB * ft;
+        var length = localStorage.getItem('len');
+        var breath = localStorage.getItem('bth');
+        var Row = localStorage.getItem('rowa');
+        var columnv = localStorage.getItem('cola');
+        let id = localStorage.getItem('cart');
 
-        //     console.log(space);
-        // } else if (unit == 'Cm') {
-        //     var len = length * centi + 'px';
-        //     var bth = breath * centi + 'px';
-        //     var row = Row * centi + 'px';
-        //     var col = columnv * centi + 'px';
-        //     var space = spaceO * centi;
-        //     var spaceA = spaceB * centi;
+        var unit = localStorage.getItem('unit');
+        var spaceo = localStorage.getItem('spaceo');
+        var spaceb = localStorage.getItem('spaceb');
 
-        //     console.log(space);
-        //     console.log(spaceA);
-        //     console.log(row);
-        //     console.log(col);
-        // } else if (unit == 'M') {
-        //     var len = length * meter + 'px';
-        //     var bth = breath * meter + 'px';
-        //     var row = Row * meter + 'px';
-        //     var col = columnv * meter + 'px';
-        //     var space = spaceO * meter;
-        //     var spaceA = spaceB * meter;
+        console.log(unit);
 
-        //     console.log(space);
-        // }
-        // let spaceX = space + 'px';
-        // let spaceY = spaceA + 'px';
-        // let spaceZ = spaceA + 'px';
-        // console.log(spaceX);
-        // if (unit == 'feet') {
-        //     var newQuan =
-        //         Math.trunc((Row * feet - spaceA * 2) / (widthp + space)) *
-        //         Math.trunc((columnv * feet - spaceA * 2) / (heightp + space));
-        //     localStorage.setItem('Quant1', newQuan);
-        // }
+        let spaceO = Number(spaceo);
+        let spaceB = Number(spaceb);
+        console.log(spaceO);
+        console.log(spaceB);
 
-        // if (unit == 'M') {
-        //     var newQuan =
-        //         Math.trunc((Row * meter - spaceA * 2) / (widthp + space)) *
-        //         Math.trunc((columnv * meter - spaceA * 2) / (heightp + space));
-        //     localStorage.setItem('Quant1', newQuan);
-        // }
-        // if (unit == 'Cm') {
-        //     var newQuan =
-        //         Math.trunc((Row * centi - spaceA * 2) / (widthp + space)) *
-        //         Math.trunc((columnv * centi - spaceA * 2) / (heightp + space));
-        //     localStorage.setItem('Quant1', newQuan);
-        // }
-        // if (unit == 'Mm') {
-        //     var newQuan =
-        //         Math.trunc((Row * mil - spaceA * 2) / (widthp + space)) *
-        //         Math.trunc((columnv * mil - spaceA * 2) / (heightp + space));
-        //     localStorage.setItem('Quant1', newQuan);
-        // }
+        var ft = 152;
+        var mil = 0.49856; // 1mm(0.003652) *152
+        var centi = 4.92; // 1cm(0.03652)*152
+        var meter = 498.68768; //1m(3.652)*152
 
-        // if (parseInt(quant) <= newQuan) {
-        //     buildLayout();
-        // } else {
-        //     console.log(Math.round(newQuan));
-        //     reduceQuantity(Math.round(newQuan));
-        // }
+        if (unit == 'Mm') {
+            var len = length * mil + 'px';
+            var bth = breath * mil + 'px';
+            var row = Row * mil + 'px';
+            var col = columnv * mil + 'px';
+            var space = spaceO * mil;
+            var spaceA = spaceB * mil;
+            console.log(space);
+        } else if (unit == 'feet') {
+            var len = length * ft + 'px';
+            var bth = breath * ft + 'px';
+            var row = Row * ft + 'px';
+            var col = columnv * ft + 'px';
+            var space = spaceO * ft;
+            var spaceA = spaceB * ft;
 
-        // document.getElementById('layout').style.gap = spaceX;
-        // document.getElementById('layout').style.padding = spaceY;
-        document.getElementById('layout').style.height = colb;
-        document.getElementById('layout').style.width = rowb;
+            console.log(space);
+        } else if (unit == 'Cm') {
+            var len = length * centi + 'px';
+            var bth = breath * centi + 'px';
+            var row = Row * centi + 'px';
+            var col = columnv * centi + 'px';
+            var space = spaceO * centi;
+            var spaceA = spaceB * centi;
+
+            console.log(space);
+            console.log(spaceA);
+            console.log(row);
+            console.log(col);
+        } else if (unit == 'M') {
+            var len = length * meter + 'px';
+            var bth = breath * meter + 'px';
+            var row = Row * meter + 'px';
+            var col = columnv * meter + 'px';
+            var space = spaceO * meter;
+            var spaceA = spaceB * meter;
+
+            console.log(space);
+        }
+
+        let spaceX = space + 'px';
+        let spaceY = spaceA + 'px';
+        console.log(spaceX);
+        if (id == 'p_1') {
+            var widthp = 304.2;
+            var heightp = 725.59;
+        } else if (id == 'p_2') {
+            var widthp = 310.68;
+            var heightp = 619.37;
+        } else if (id == 'p_3') {
+            var widthp = 269;
+            var heightp = 247.76;
+            console.log(widthp);
+            console.log(heightp);
+        } else if (id == 'p_4') {
+            var widthp = 310.68;
+            var heightp = 912.6;
+        } else if (id == 'p_5') {
+            var widthp = 448.4;
+            var heightp = 448.4;
+        } else if (id == 'p_6') {
+            var widthp = 305.2;
+            var heightp = 279.68;
+        } else if (id == 'p_7') {
+            var widthp = 304;
+            var heightp = 942.4;
+        } else if (id == 'p_8') {
+            var widthp = 275;
+            var heightp = 297.92;
+        } else if (id == 'p_9') {
+            var widthp = 275.12;
+            var heightp = 267.92;
+        } else if (id == 'p_10') {
+            var widthp = 299.212;
+            var heightp = 375.869;
+        } else if (id == 'p_11') {
+            var widthp = 317;
+            var heightp = 381.368;
+        }
+
+        document.getElementById('layout').style.gap = spaceX;
+        document.getElementById('layout').style.padding = spaceY;
+        document.getElementById('layout').style.height = col;
+        document.getElementById('layout').style.width = row;
         document.getElementById('area').style.height = len;
         document.getElementById('area').style.width = bth;
+
+        if (unit == 'feet') {
+            var newQuan =
+                Math.trunc((Row * ft - spaceA * 2) / (widthp + space)) *
+                Math.trunc((columnv * ft - spaceA * 2) / (heightp + space));
+            console.log(newQuan);
+
+            localStorage.setItem('Quant1', newQuan);
+        }
     };
 
     return (
@@ -132,6 +164,14 @@ export default function Layout() {
                         <label>
                             Col:
                             <input type="number" id="col" />
+                        </label>
+                        <label>
+                            Border Spacing
+                            <input type="number" id="spaceb" />
+                        </label>
+                        <label>
+                            Object Spacing
+                            <input type="number" id="spaceo" />
                         </label>
                         <label>
                             Unit
@@ -206,17 +246,10 @@ export default function Layout() {
                     <div className="container m-0 p-0 " id="container_3">
                         <div className="area " id="area">
                             <div id="layout">
-                                <div id="p_1" className="p"></div>
-                                <div id="p_2" className="p"></div>
                                 <div id="p_3" className="p"></div>
-                                <div id="p_4" className="p"></div>
-                                <div id="p_5" className="p"></div>
-                                <div id="p_6" className="p"></div>
-                                <div id="p_7" className="p"></div>
-                                <div id="p_8" className="p"></div>
-                                <div id="p_9" className="p"></div>
-                                <div id="p_10" className="p"></div>
-                                <div id="p_11" className="p"></div>
+                                <div id="p_3" className="p"></div>
+                                <div id="p_3" className="p"></div>
+                                <div id="p_3" className="p"></div>
                             </div>
                         </div>
                     </div>
