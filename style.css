@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+/*-------------------------------------------------------------Navbzr-------------------------------------------------------------------------*/
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+  z-index: 100;
+}
+#navbar ul {
+  margin-right: 20%;
+}
+#navbar li {
+  color: #fd7e14;
+
+  padding: 5px;
+}
+#navbar a {
+  color: #fd7e14;
+}
+.nav-link {
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.nav-link:hover {
+  border-bottom: 2px solid #fd7e14;
+  transition: 0.1s;
+}
+#navbar svg {
+  width: 30px;
+  height: 30px;
+}
+#navbar img {
+  border-radius: 5px;
+}
+#logo_1 {
+  width: 130px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+  height: 70px;
+}
+#logo_2 {
+  width: 200px;
+  padding: 5px;
+  height: 70px;
+}
+/*-------------------------------------------- Section common-----------------------------------------------------------------------------------------------*/
+
+.signin {
+  background-color: tomato !important;
+  color: #fff !important;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btnhover:hover,
+.signin:hover {
+  background-color: transparent !important;
+  border: 2px solid #000;
+  color: #000 !important;
+}
+.cardbg {
+  background-color: tomato;
+}
+
+.border1 {
+  border: 3px solid #fff;
+}
+.proceed {
+  margin: 20px;
+  background-color: rgb(255, 111, 0) !important;
+  width: 300px;
+  color: white !important;
+}
+
+.proceed:hover {
+  color: #000 !important;
+  background-color: white !important;
+  border: 2px solid #000;
+}
+
+/*------------------------------ Home -------------------------------------------------------------------------------------------------------------------------*/
+section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #d1c4c4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Home */
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./images/nathan-oakley--peWKMDCyw4-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+#home h1 {
+  font-size: 100px;
+  color: #fd7e14;
+  letter-spacing: 3px;
+  text-shadow: 0px 1px 0px #ccc, 0px 2px 0px #ccc, 0px 3px 0px #ccc,
+    0px 4px 0px #ccc, 0px 5px 0px #ccc, 0px 6px 0px #ccc, 0px 7px 0px #ccc;
+  animation: content 2s ease-in-out;
+}
+@keyframes content {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+#home p {
+  font-size: 20px;
+  color: #fff;
+  animation: p 1s ease-in-out;
+}
+@keyframes p {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+#home .input-group {
+  width: 40%;
+  height: 45px;
+}
+.signin {
+  background-color: tomato !important;
+  color: #fff !important;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+.btnhover:hover,
+.signin:hover {
+  background-color: transparent !important;
+  border: 2px solid #000;
+  color: #000 !important;
+}
+@media (max-width: 700px) {
+  #home h1 {
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 600;
+    /* background: #fff; */
+    color: white;
+    letter-spacing: normal;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    text-shadow: none;
+    margin-bottom: 10px;
+    border: none !important;
+  }
+  #home h1:hover {
+    background: linear-gradient(
+      to right,
+      rgb(255, 0, 157),
+      rgb(255, 111, 0) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid #000 !important;
+  }
+  #home p {
+    font-size: 15px;
+  }
+  #home .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #home input {
+    width: 100%;
+    height: 40px;
+  }
+  #home button {
+    margin-top: 5px;
+    width: auto;
+    border-radius: 20px;
+  }
+}
+/*----------------------------------------------------------------Layout------------------------------------------------------------------------------------*/
+#layout-getstarted {
+  background: #d1c4c4;
+  background-image: linear-gradient(
+      rgba(187, 170, 170, 0.8),
+      rgba(133, 64, 0, 0.8)
+    ),
+    url('./images/undraw_cabin_hkfr.svg');
+  background-size: cover;
+  background-position: center;
+}
+#layout-getstarted {
+  width: 100%;
+  min-height: 50vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#layout-getstarted h1 {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+}
+#layout-getstarted .container {
+  background: rgba(255, 111, 0, 0.7);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.gs {
+  width: 200px;
+  height: 60px;
+}
+#layout button:hover {
+  background-color: transparent !important;
+  border: 2px solid #000;
+}
+@media (max-width: 700px) {
+  #layout .container {
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+}
+
+/*-----------------------------------------------------About-------------------------------------------------------------------------------------------*/
+#about {
+  background: rgba(255, 111, 0, 0.9);
+}
+#about .container {
+  margin-top: 0 !important;
+}
+#about .card {
+  background-color: rgba(0, 0, 0, 13%) !important;
+}
+#about h1 {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  color: rgb(33, 37, 41);
+}
+#about h1::after {
+  content: '';
+  width: 0%;
+  height: 5px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+#about h1:hover::after {
+  width: 20%;
+}
+#about p {
+  color: rgb(33, 37, 41);
+}
+#about .card {
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3), inset 4px 4px 10px white;
+}
+#about .card:hover {
+  box-shadow: inset 15px 20px 20px rgba(0, 0, 0, 0.3), -4px -4px 10px #fff;
+  transition: 0.3s;
+}
+.cardbg {
+  background-color: tomato;
+}
+.border1 {
+  border: 3px solid #fff;
+}
+/*----------------------------------------------------------------products-------------------------------------------------------------------------------*/
+#products {
+  overflow: hidden;
+  background-image: linear-gradient(rgb(255 255 255 / 80%), rgb(255 111 0)),
+    url('./images/undraw_cabin_hkfr.svg');
+}
+#products h1 {
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 5px 5px 5px #000;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#products h1::after {
+  content: '';
+  width: 0%;
+  height: 5px;
+  background: #fd7e14;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+#products h1:hover::after {
+  width: 30%;
+}
+/* #products span:hover{
+
+   border-bottom: 5px solid tomato;
+
+} */
+#products img {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+}
+#products .card {
+  width: 250px;
+  height: 300px;
+  background: rgb(0, 0, 0, 13%);
+  border: none !important;
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3), inset 4px 4px 10px white;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
+}
+#products .card:hover {
+  box-shadow: inset 15px 20px 20px rgba(0, 0, 0, 0.3), -4px -4px 10px #fff;
+  transition: 0.3s;
+}
+#products button {
+  background-color: #fd7e14;
+  color: #fff;
+  margin-bottom: 10px;
+}
+@media (max-width: 975px) {
+  #products .row {
+    display: block;
+  }
+  #products .card {
+    margin-left: 15px;
+  }
+}
+
+/*----------------------------------------------------footer--------------------------------------------------------------------------------*/
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255 111 0);
+  text-align: center;
+  color: white;
+  padding: 3px;
+}
+i {
+  margin-left: 2px;
+  margin-right: 5px;
+}
+@media (max-width: 700px) {
+  footer {
+    height: 75px;
+  }
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------page-2------------------------------------------------------------- */
+
+#home_1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./images/nathan-oakley--peWKMDCyw4-unsplash.jpg');
+  background-size: auto;
+  background-position: center;
+  flex-direction: column;
+}
+
+#home_1 h1 {
+  font-size: 100px;
+  color: #fd7e14;
+  letter-spacing: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0px 1px 0px #ccc, 0px 2px 0px #ccc, 0px 3px 0px #ccc,
+    0px 4px 0px #ccc, 0px 5px 0px #ccc, 0px 6px 0px #ccc, 0px 7px 0px #ccc;
+  animation: layout 2s ease-in-out;
+}
+
+@keyframes layout {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+#home_1 {
+  width: 100%;
+  min-height: 60vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home_1 p {
+  color: #fff;
+}
+
+#home_1 .input-group {
+  width: 40%;
+  height: 45px;
+}
+
+@media (max-width: 700px) {
+  #home_1 h1 {
+    margin-top: 30px;
+    font-size: 70px;
+  }
+}
+/*-----------------------------------------------------Input form-------------------------------------------------------------------------------------*/
+#inputform {
+  overflow: hidden;
+  background-image: url('./images/undraw_cabin_hkfr.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #e5e5e5;
+  min-height: 60vh !important;
+  display: flex;
+  width: 100%;
+}
+#inputform h1 {
+  background-color: tomato;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  font-size: 50px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+#inputform h1:hover {
+  background-color: darkorange !important;
+  animation: h1 2s linear alternate;
+  transition: 2s;
+}
+@keyframes h1 {
+  100% {
+    transition: 2s;
+
+    transform: translateX(245px);
+  }
+}
+#inputform .container {
+  display: flex !important;
+
+  width: 50%;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 111, 0);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+#inputform select {
+  width: 200px !important;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+#inputform input {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+#note:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+
+  background-color: rgb(255, 111, 0) !important;
+  animation: note 2s;
+}
+/* @keyframes note {
+  5% {
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+  }
+  50% {
+    border-radius: 50%;
+    display: none;
+    transition: 1s;
+  }
+  100% {
+    transition: 1s;
+    transform: rotateZ(360deg);
+  }
+} */
+#note {
+  width: 30% !important;
+  display: flex;
+  margin-top: 0px;
+
+  font-size: 20px;
+  background-color: transparent !important;
+
+  align-items: flex-start !important;
+}
+#note h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+#inputform label {
+  width: 200px;
+}
+
+#inputform .btn {
+  width: 200px;
+}
+input[data-error] {
+  border: 2px solid #fd7e14;
+  color: #fd7e14;
+  background-color: #fff;
+}
+input[data-error]::after {
+  content: attr(data-error);
+}
+
+@media (max-width: 375px) {
+  #inputform {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  #inputform .container,
+  #note {
+    width: 300px !important;
+  }
+}
+
+/*-------------------page3------------------------------------------------------------------------------------------------------------------*/
+#Quan {
+  background: url('./images/undraw_my_answer_re_k4dv.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Dragid {
+  width: 100%;
+  display: block;
+  min-height: 70vh !important;
+}
+#Dragid {
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+#Dragid h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+/* #Dragid h1:hover {
+  animation: h1 1s linear;
+} */
+#Dragid .container {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.breadcrumb {
+  margin: 10px 0 !important;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #fd7e14;
+  font-weight: 700;
+}
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+#scroll {
+  width: 100%;
+}
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  height: 60vh;
+  top: 30%;
+  width: 1000px;
+
+  overflow-y: scroll;
+}
+
+#myUL li {
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+#myUL li a {
+  border: 1px solid #ddd;
+  background-color: #fd7e14;
+
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+  display: block;
+}
+#myUL li a:hover {
+  background-color: rgb(255, 111, 0) !important;
+}
+
+.modal-body img {
+  width: 300px;
+  height: 300px;
+  border: 5px solid #000;
+}
+.modal-content {
+  font-weight: 600;
+  font-size: 20px;
+  background-color: tomato !important;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 930px) {
+  #conbtn {
+    width: 100%;
+    display: block !important;
+    margin-bottom: 10px;
+  }
+  #Dragid {
+    width: 100%;
+    display: block !important;
+    overflow-y: hidden;
+  }
+}
+
+section #quantity {
+  background-image: url('./images/undraw_cabin_hkfr.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#quantity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  height: 50vh !important;
+  padding: 20px;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  background-color: rgb(255, 111, 0);
+  align-items: center;
+}
+#quantity h1 {
+  font-size: 50px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(255, 101, 3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+#quantity h1:hover {
+  background-color: black;
+  color: #ddd;
+}
+
+.cart-page {
+  margin: 80px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+th {
+  text-align: center !important;
+  padding: 10px 20px;
+  color: #fff;
+
+  background: #ff523b;
+  font-weight: normal;
+}
+td {
+  padding: 10px 5px;
+}
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+.cart-page h1 {
+  background: #e5e5e5;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px !important;
+  font-weight: 300;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.PlusMinus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.PlusMinus button {
+  width: 30px;
+  border: 1px solid#000;
+  background-color: seagreen;
+  box-shadow: 5px 0px 5px rgba(66, 40, 40, 0.6);
+  padding: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+.PlusMinus h1 {
+  background-color: silver !important;
+}
+td .block {
+  font-size: 20px !important;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background-color: silver;
+  height: 50px !important;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #000;
+  display: flex;
+}
+@media (max-width: 400px) {
+  #quantity {
+    height: 500px !important;
+  }
+}
