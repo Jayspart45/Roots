@@ -1,11 +1,25 @@
+import { product } from 'prelude-ls';
 import React from 'react';
 import { useEffect } from 'react';
+import prod from '../product1.json';
 export default function Layout() {
+    let id = localStorage.getItem('id');
+    let idstorage = id.split(',');
+
     useEffect(() => {
         let cart = localStorage.getItem('cart');
+
         console.log(cart);
         console.log(cart.split(','));
         let cartStorage = cart.split(',');
+        console.log(idstorage);
+        const exportfunc = () => {
+            const product = prod.product;
+
+            console.log(product);
+        };
+        exportfunc();
+        // const [cartindex, setcartindex] = useState([]);
     }, []);
 
     const Calculate = () => {
@@ -29,7 +43,6 @@ export default function Layout() {
         var breath = localStorage.getItem('bth');
         var Row = localStorage.getItem('rowa');
         var columnv = localStorage.getItem('cola');
-        let id = localStorage.getItem('cart');
 
         var unit = localStorage.getItem('unit');
         var spaceo = localStorage.getItem('spaceo');
@@ -90,42 +103,6 @@ export default function Layout() {
         let spaceX = space + 'px';
         let spaceY = spaceA + 'px';
         console.log(spaceX);
-        if (id == 'p_1') {
-            var widthp = 304.2;
-            var heightp = 725.59;
-        } else if (id == 'p_2') {
-            var widthp = 310.68;
-            var heightp = 619.37;
-        } else if (id == 'p_3') {
-            var widthp = 269;
-            var heightp = 247.76;
-            console.log(widthp);
-            console.log(heightp);
-        } else if (id == 'p_4') {
-            var widthp = 310.68;
-            var heightp = 912.6;
-        } else if (id == 'p_5') {
-            var widthp = 448.4;
-            var heightp = 448.4;
-        } else if (id == 'p_6') {
-            var widthp = 305.2;
-            var heightp = 279.68;
-        } else if (id == 'p_7') {
-            var widthp = 304;
-            var heightp = 942.4;
-        } else if (id == 'p_8') {
-            var widthp = 275;
-            var heightp = 297.92;
-        } else if (id == 'p_9') {
-            var widthp = 275.12;
-            var heightp = 267.92;
-        } else if (id == 'p_10') {
-            var widthp = 299.212;
-            var heightp = 375.869;
-        } else if (id == 'p_11') {
-            var widthp = 317;
-            var heightp = 381.368;
-        }
 
         document.getElementById('layout').style.gap = spaceX;
         document.getElementById('layout').style.padding = spaceY;
@@ -136,12 +113,13 @@ export default function Layout() {
 
         if (unit == 'feet') {
             var newQuan =
-                Math.trunc((Row * ft - spaceA * 2) / (widthp + space)) *
-                Math.trunc((columnv * ft - spaceA * 2) / (heightp + space));
-            console.log(newQuan);
+                // Math.trunc((Row * ft - spaceA * 2) / (widthp + space)) *
+                // Math.trunc((columnv * ft - spaceA * 2) / (heightp + space));
+                console.log(newQuan);
 
             localStorage.setItem('Quant1', newQuan);
         }
+        
     };
 
     return (
@@ -246,10 +224,9 @@ export default function Layout() {
                     <div className="container m-0 p-0 " id="container_3">
                         <div className="area " id="area">
                             <div id="layout">
-                                <div id="p_3" className="p"></div>
-                                <div id="p_3" className="p"></div>
-                                <div id="p_3" className="p"></div>
-                                <div id="p_3" className="p"></div>
+                                {idstorage.map((id, index) => (
+                                    <div className="p" key={index} id={`${id}`}></div>
+                                ))}
                             </div>
                         </div>
                     </div>

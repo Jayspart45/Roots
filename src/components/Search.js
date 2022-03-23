@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Layout from './Layout';
-import $ from 'jquery';
 
 const myProducts = [
     {
@@ -108,15 +106,20 @@ let myFunction = () => {
 };
 export default function Search() {
     const [cart, setCart] = useState([]);
-
-    const addToCart = (el) => setCart(cart.concat(el));
+    const [index, setindex] = useState([]);
+    const addToCart = (el, el2) => {
+        setCart(cart.concat(el));
+        setindex(index.concat(el2));
+    };
     console.log(cart.length);
+    console.log(index);
     const removeCart = () => {
         setCart([]);
     };
     const passData = () => {
         console.log(cart);
         localStorage.setItem('cart', cart);
+        localStorage.setItem('id', index);
     };
     const Quantity = () => {
         for (let i = 0; i < cart.length; i++) {
@@ -155,7 +158,7 @@ export default function Search() {
                                 type="submit"
                                 className="btn"
                                 type="submit"
-                                onClick={() => addToCart(elem.name)}
+                                onClick={() => addToCart(elem.name, elem.id)}
                             >
                                 Add to cart
                             </button>
